@@ -21,5 +21,9 @@ How to setup the project:
 ```
 git clone <...>
 cd HR_assignment
+virtualenv venv
+venv/bin/pip install -r requirements.txt
+venv/bin/python manage.py migrate
+venv/bin/python manage.py runserver
 ...
 ```
