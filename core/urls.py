@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('RentVerse.urls')),
+    path('', include('api.urls')),
 ]
 
 if settings.DEBUG:

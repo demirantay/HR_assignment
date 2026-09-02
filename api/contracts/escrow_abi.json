@@ -1,0 +1,7 @@
+[
+  {"inputs": [], "name": "getBalance", "outputs": [{"type": "uint256"}], "stateMutability": "view", "type": "function"},
+  {"inputs": [{"type": "uint256"}], "name": "isListed", "outputs": [{"type": "bool"}], "stateMutability": "view", "type": "function"},
+  {"inputs": [{"type": "uint256"}], "name": "purchasePrice", "outputs": [{"type": "uint256"}], "stateMutability": "view", "type": "function"},
+  {"inputs": [{"type": "uint256"}], "name": "buyer", "outputs": [{"type": "address"}], "stateMutability": "view", "type": "function"},
+  {"inputs": [{"type": "uint256"}], "name": "depositEarnest", "outputs": [], "stateMutability": "payable", "type": "function"}
+]
