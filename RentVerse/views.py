@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, "RentVerse/index.html")
+    return render(request, "index.html")
