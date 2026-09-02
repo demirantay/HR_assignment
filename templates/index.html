@@ -1,5 +1,270 @@
-index.html
+{% load static %}
 
-<br>
+<!-- wadup ripple tech team! -->
 
-hrllo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentVerse - Invest in Real Estate with Crypto</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script src="{% static 'theme.js' %}"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container inner">
+      <a href="{% url 'home' %}" class="brand">
+        <svg width="26" height="30" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15" cy="20" r="10" stroke="#0682ff"/>
+          <circle cx="15" cy="20" r="6" stroke="#0682ff" stroke-width="3"/>
+        </svg>
+        RentVerse
+      </a>
+      <div class="nav-links">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <span id="wallet-status"></span>
+        <button id="wallet-connect-btn" class="btn">Connect Wallet</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80" alt="Hero background">
+    <div class="hero-content">
+      <h1>Invest and Trade in Real Estate with Cryptocurrency</h1>
+      <p>Own fractional shares of premium properties through NFTs. Start investing with as little as $10.</p>
+    </div>
+  </section>
+
+  <!-- Investment Steps -->
+  <section class="container">
+    <div class="section-head">
+      <h2>Start Investing in Minutes</h2>
+      <p>Your journey to crypto-powered real estate investment</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">👛</div>
+        <div class="step-num">Step 1</div>
+        <h3>Connect Wallet</h3>
+        <p>Connect your cryptocurrency wallet to RentVerse to start investing.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏬</div>
+        <div class="step-num">Step 2</div>
+        <h3>Choose Property</h3>
+        <p>Browse our marketplace and select properties that match your investment goals.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💵</div>
+        <div class="step-num">Step 3</div>
+        <h3>Receive Returns</h3>
+        <p>Collect monthly rental returns directly to your connected wallet.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔁</div>
+        <div class="step-num">Step 4</div>
+        <h3>Flexible Exit</h3>
+        <p>Sell your property NFTs whenever you want through our marketplace.</p>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br>
+
+  <!-- How It Works -->
+  <section class="dark-panel">
+    <div class="container">
+      <div class="section-head">
+        <h2>How RentVerse Works</h2>
+        <p>Understanding our tokenized real estate platform</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">🪙</div>
+          <h3>Tokenization</h3>
+          <p>Properties are divided into $10 NFT tokens, making real estate investment accessible to everyone.</p>
+        </div>
+        <div class="card">
+          <div class="icon">Ξ</div>
+          <h3>Purchase NFTs</h3>
+          <p>Buy property NFTs using cryptocurrency, becoming a fractional owner of the property.</p>
+        </div>
+        <div class="card">
+          <div class="icon">💰</div>
+          <h3>Monthly Returns</h3>
+          <p>Receive your share of rental income directly to your wallet each month.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔄</div>
+          <h3>Flexible Trading</h3>
+          <p>Hold for passive income or sell your NFTs on our marketplace at any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section class="container" id="properties">
+    <div class="section-head">
+      <h2>Featured Investment Opportunities</h2>
+      <p>Curated properties with verified returns and immediate tokenization</p>
+    </div>
+    <div class="property-grid">
+
+      <div class="property-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80" alt="Luxury Downtown Apartment">
+          <span class="status-badge">Active Investment</span>
+        </div>
+        <div class="property-body">
+          <h3>Luxury Downtown Apartment</h3>
+          <p class="loc">Miami, FL</p>
+          <div class="property-meta">
+            <div>
+              <div class="label">Price</div>
+              <div class="value">$850,000</div>
+              <div class="eth">425 ETH</div>
+            </div>
+            <div style="text-align:right">
+              <div class="label">ROI</div>
+              <div class="value roi">7.2% Annual</div>
+            </div>
+          </div>
+          <div class="property-stats">
+            <div class="stat-row"><span>Total Investors</span><span>142</span></div>
+            <div class="stat-row"><span>Funded</span><span>89%</span></div>
+            <div class="stat-row"><span>Min Investment</span><span>$10</span></div>
+          </div>
+          <button class="btn" style="width:100%">Invest Now &rarr;</button>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Modern Tech District Complex">
+          <span class="status-badge">Almost Funded</span>
+        </div>
+        <div class="property-body">
+          <h3>Modern Tech District Complex</h3>
+          <p class="loc">Austin, TX</p>
+          <div class="property-meta">
+            <div>
+              <div class="label">Price</div>
+              <div class="value">$1,200,000</div>
+              <div class="eth">600 ETH</div>
+            </div>
+            <div style="text-align:right">
+              <div class="label">ROI</div>
+              <div class="value roi">6.8% Annual</div>
+            </div>
+          </div>
+          <div class="property-stats">
+            <div class="stat-row"><span>Total Investors</span><span>203</span></div>
+            <div class="stat-row"><span>Funded</span><span>95%</span></div>
+            <div class="stat-row"><span>Min Investment</span><span>$10</span></div>
+          </div>
+          <button class="btn" style="width:100%">Invest Now &rarr;</button>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Waterfront Commercial Space">
+          <span class="status-badge">New Listing</span>
+        </div>
+        <div class="property-body">
+          <h3>Waterfront Commercial Space</h3>
+          <p class="loc">Seattle, WA</p>
+          <div class="property-meta">
+            <div>
+              <div class="label">Price</div>
+              <div class="value">$2,100,000</div>
+              <div class="eth">1050 ETH</div>
+            </div>
+            <div style="text-align:right">
+              <div class="label">ROI</div>
+              <div class="value roi">7.5% Annual</div>
+            </div>
+          </div>
+          <div class="property-stats">
+            <div class="stat-row"><span>Total Investors</span><span>89</span></div>
+            <div class="stat-row"><span>Funded</span><span>45%</span></div>
+            <div class="stat-row"><span>Min Investment</span><span>$10</span></div>
+          </div>
+          <button class="btn" style="width:100%">Invest Now &rarr;</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-alt-section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why Choose RentVerse</h2>
+        <p>Experience the future of real estate investment</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>Profitability</h3>
+          <p>Target average annual returns of 7% through strategic property investments and efficient management.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔀</div>
+          <h3>Liquidity</h3>
+          <p>Trade your property NFTs anytime on our marketplace, providing unprecedented real estate liquidity.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3>No Hidden Fees</h3>
+          <p>Transparent pricing with no entry, exit, or capital gains fees. What you see is what you get.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚙️</div>
+          <h3>Hassle-Free Management</h3>
+          <p>RentVerse handles all property management aspects, from maintenance to tenant relations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="container">
+    <div class="cta-box">
+      <h2>Ready to Start Investing?</h2>
+      <p>Join thousands of investors already earning passive income through tokenized real estate.</p>
+      <div class="cta-actions">
+        <a href="#properties" class="btn btn-white">Browse Properties</a>
+        <button id="cta-connect-btn" class="btn btn-dark">Connect Wallet</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="faq">
+    <div class="container">rentverse hr demo made by me demir.</div>
+  </footer>
+
+  <script src="{% static 'wallet.js' %}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const mainBtn = document.getElementById("wallet-connect-btn");
+      const ctaBtn = document.getElementById("cta-connect-btn");
+      if (ctaBtn) ctaBtn.addEventListener("click", () => mainBtn.click());
+    });
+  </script>
+</body>
+</html>
