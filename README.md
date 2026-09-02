@@ -12,7 +12,7 @@ to demonstrate the expected results:
 Todo
 - [x] night mode toggle (frontend task)
 - [x] meta mask wallet connection (frontend buttong)
-- [ ] creating api endpoints (Backend api showcase)
+- [x] creating api endpoints (Backend api showcase)
 
 ### Docs
 
@@ -27,3 +27,5 @@ venv/bin/python manage.py migrate
 venv/bin/python manage.py runserver
 ...
 ```
+
+Here is the finished version for now.
